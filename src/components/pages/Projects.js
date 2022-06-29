@@ -7,7 +7,7 @@ import fetch2 from '../../assets/large/projects/1-fetch-2.png'
 
 
 export default function Projects() {
-  
+  //Todo look up how to map an array in react
   return (
     <div>
       <h1>Projects Page</h1>
