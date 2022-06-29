@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/isaacgonzalez-react-portfolio/static/css/main.f0d685eb.css",
-    "main.js": "/isaacgonzalez-react-portfolio/static/js/main.05e5229e.js",
+    "main.js": "/isaacgonzalez-react-portfolio/static/js/main.104e6596.js",
     "static/media/0-sikester-main.png": "/isaacgonzalez-react-portfolio/static/media/0-sikester-main.e2f4384e00323eb9d4ff.png",
     "static/media/1-fetch-2.png": "/isaacgonzalez-react-portfolio/static/media/1-fetch-2.e194efedc49902725e4b.png",
     "static/media/1-fetch.png": "/isaacgonzalez-react-portfolio/static/media/1-fetch.9bc84827bca8d8698a90.png",
     "static/media/0-sikester.png": "/isaacgonzalez-react-portfolio/static/media/0-sikester.57085fb10b35acac4255.png",
     "index.html": "/isaacgonzalez-react-portfolio/index.html",
     "main.f0d685eb.css.map": "/isaacgonzalez-react-portfolio/static/css/main.f0d685eb.css.map",
-    "main.05e5229e.js.map": "/isaacgonzalez-react-portfolio/static/js/main.05e5229e.js.map"
+    "main.104e6596.js.map": "/isaacgonzalez-react-portfolio/static/js/main.104e6596.js.map"
   },
   "entrypoints": [
     "static/css/main.f0d685eb.css",
-    "static/js/main.05e5229e.js"
+    "static/js/main.104e6596.js"
   ]
 }
