@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
 // Here we import a helper function that will check if the email is valid
-import { checkPassword, validateEmail } from '../../utils/helpers';
+import { validateEmail } from '../../utils/helpers';
 
 function Contact() {
   // Create state variables for the fields in the form
   // We are also setting their initial values to an empty string
   const [email, setEmail] = useState('');
-  const [userName, setUserName] = useState('');
-  const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
+  const [name, setName] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
@@ -17,13 +17,13 @@ function Contact() {
     const inputType = target.name;
     const inputValue = target.value;
 
-    // Based on the input type, we set the state of either email, username, and password
+    // Based on the input type, we set the state of either email, message, and name
     if (inputType === 'email') {
       setEmail(inputValue);
-    } else if (inputType === 'userName') {
-      setUserName(inputValue);
+    } else if (inputType === 'message') {
+      setMessage(inputValue);
     } else {
-      setPassword(inputValue);
+      setName(inputValue);
     }
   };
 
@@ -31,24 +31,24 @@ function Contact() {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     e.preventDefault();
 
-    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-    if (!validateEmail(email) || !userName) {
-      setErrorMessage('Email or username is invalid');
+    // First we check to see if the email is not valid or if the message is empty. If so we set an error message to be displayed on the page.
+    if (!validateEmail(email) || !message) {
+      setErrorMessage('Email or message is invalid');
       // We want to exit out of this code block if something is wrong so that the user can correct it
       return;
-      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
+      // Then we check to see if the name is not valid. If so, we set an error message regarding the name.
     }
-    if (!checkPassword(password)) {
-      setErrorMessage(
-        `Choose a more secure password for the account: ${userName}`
-      );
-      return;
-    }
-    alert(`Hello ${userName}`);
+    // if (!checkPassword(name)) {
+    //   setErrorMessage(
+    //     `Choose a more secure name for the account: ${message}`
+    //   );
+    //   return;
+    // }
+    alert(`Hello user!`);
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setUserName('');
-    setPassword('');
+    setMessage('');
+    setName('');
     setEmail('');
   };
 
@@ -61,21 +61,21 @@ function Contact() {
           name="email"
           onChange={handleInputChange}
           type="email"
-          placeholder="email"
+          placeholder="Email"
         />
         <input
-          value={userName}
-          name="userName"
+          value={message}
+          name="message"
           onChange={handleInputChange}
           type="text"
-          placeholder="username"
+          placeholder="Message"
         />
         <input
-          value={password}
-          name="password"
+          value={name}
+          name="name"
           onChange={handleInputChange}
-          type="password"
-          placeholder="Password"
+          type="text"
+          placeholder="Name"
         />
         <button type="button" onClick={handleFormSubmit}>Submit</button>
       </form>
